@@ -7,10 +7,13 @@ import br.com.github.edumaxsantos.dspesquisa.entities.Record;
 import br.com.github.edumaxsantos.dspesquisa.repositories.GameRepository;
 import br.com.github.edumaxsantos.dspesquisa.repositories.RecordRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Service
 public class RecordService {
@@ -37,5 +40,11 @@ public class RecordService {
 
         return new RecordDTO(saved);
 
+    }
+
+
+    @Transactional(readOnly = true)
+    public Page<RecordDTO> findByMoments(LocalDateTime minDate, LocalDateTime maxDate, PageRequest pageRequest) {
+        return repository.findByMoments(minDate, maxDate, pageRequest).map(RecordDTO::new);
     }
 }
