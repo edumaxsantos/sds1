@@ -52,7 +52,6 @@ const styles = StyleSheet.create({
   title: {
     color: '#00D4FF',
     fontSize: 36,
-    fontWeight: 'bold',
     marginTop: 31,
     fontFamily: "Play_700Bold",
   },
@@ -85,7 +84,6 @@ const styles = StyleSheet.create({
     paddingLeft: 50,
     paddingRight: 50,
     fontFamily: "Play_700Bold",
-    fontWeight: 'bold',
     fontSize: 18,
     color: '#0B1F34',
   }

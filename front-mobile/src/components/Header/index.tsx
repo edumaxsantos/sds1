@@ -31,7 +31,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   textLogo1: {
-    fontWeight: 'bold',
     fontSize: 18,
     fontFamily: "Play_700Bold",
     color: '#ED7947',
@@ -39,7 +38,6 @@ const styles = StyleSheet.create({
     marginRight: 5,
   },
   textLogo2: {
-    fontWeight: 'bold',
     fontFamily: "Play_700Bold",
     fontSize: 18,
     color: '#FFF'
